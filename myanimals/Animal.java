@@ -11,6 +11,19 @@ public class Animal {
 
         System.out.println(Cat.MAX_LIVES);
         System.out.println(Cat.getCatCount()); //could also call from myCat.getCatCount but this is discouraged because it is global and not individual.
+
+        Dog myDog = new Dog();
+        myDog.name = "Spot";
+
+        Dog myDog2 = new Dog();
+        myDog2.name = "Rex";
+
+        myDog2.bark();
+        myDog.bark();
+
+        int numOfAnimals = Cat.getCatCount() + Dog.getDogCount();
+        System.out.println("there are " + numOfAnimals + " animals.");
+
     }
 
 }
